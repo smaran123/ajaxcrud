@@ -17,6 +17,7 @@
         <td><%= post.name %></td>
         <td><%= post.description %></td>
         <td><%= link_to 'Show', post %></td>
+             <td><%= link_to 'ajaxcall', ajaxcall_posts_path, :remote => true %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -25,5 +26,6 @@
 </table>
 
 <br>
-
+<div id="ajax">
 <%= link_to 'New Post', new_post_path %>
+</div>
